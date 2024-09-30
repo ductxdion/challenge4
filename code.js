@@ -1,4 +1,4 @@
-var _ = require('lodash')
+import _ from 'https://cdn.jsdelivr.net/npm/lodash-es@4.17.21/lodash.js';
 // given the following array, randomize it.
 
 var students = [
@@ -21,8 +21,8 @@ function randomArray(arr) {
     return Math.floor(Math.random() * arr.length)
   }
   var newArr = []
-  while (arr.length >= 0) {
-    newArr.push(arr.slice(randomNumber(), 1)[0])
+  while (arr.length > 0) {
+    newArr.push(arr.splice(randomNumber(), 1)[0])
   }
   return newArr
 }
